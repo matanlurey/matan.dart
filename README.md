@@ -13,7 +13,7 @@ The personal Dart package of <https://github.com/matanlurey>.
 [gha_url]: https://github.com/matanlurey/matan.dart/actions
 [gha_img]: https://github.com/matanlurey/matan.dart/workflows/Dart/badge.svg
 [cov_url]: https://codecov.io/gh/matanlurey/matan.dart
-[cov_img]: https://codecov.io/gh/matanlurey/matan.dart/branch/master/graph/badge.svg
+[cov_img]: https://codecov.io/gh/matanlurey/matan.dart/branch/main/graph/badge.svg
 [doc_url]: https://pub.dev/documentation/matan/latest
 [doc_img]: https://img.shields.io/badge/Documentation-matan-blue.svg
 [sty_url]: https://pub.dev/packages/matan
