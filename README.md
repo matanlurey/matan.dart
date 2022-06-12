@@ -24,7 +24,7 @@ working with Dart, but I don't want to bother publishing a more proper set of
 packages. If anything in this package grows too much in scope, it's a candidate
 for another package.
 
-**This package will never contain any non-dev depdencies.**
+**This package contains no non-dev depdencies besides`package:meta`.**
 
 ## Installation
 
