@@ -23,7 +23,7 @@ extension IterableX<T> on Iterable<T> {
   /// when [other]'s size grows to a non-trivial size, it is recommended to roll
   /// your own implementation based on the semantics of your collections.
   bool containsAll(
-    Iterable<T?> other, {
+    Iterable<T> other, {
     bool Function(Object?, Object?) equals = _equalityTest,
   }) {
     if (identical(this, other)) {
@@ -41,7 +41,7 @@ extension IterableX<T> on Iterable<T> {
   ///
   /// Equality of elements is implemented by `==` test by default for [equals].
   bool containsExactly(
-    Iterable<T?> other, {
+    Iterable<T> other, {
     bool Function(Object?, Object?) equals = _equalityTest,
   }) {
     if (identical(this, other)) {
