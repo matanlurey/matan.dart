@@ -13,6 +13,10 @@ This library is likely to be re-added at a future point in time.
 - Added `ImmutableCollection`, `ImmutableCollectionBuilder`.
 - Added `ImmutableList`, `ImmutableListBuilder`.
 
+### `convert.dart`
+
+- Added `StructuredData`, `JsonStructuredData`, to help parse JSON-like data.
+
 ### `railway.dart`
 
 - Added `Or2`, `Or3`, `Or4` as union-like classes for FP-like programming.

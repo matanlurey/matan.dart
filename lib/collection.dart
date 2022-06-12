@@ -3,7 +3,7 @@
 /// This package intentionally does not import, attempt parity, or otherwise
 /// defer to [`package:collection`](https://pub.dev/packages/collection) or
 /// related packages, these are my own personalized preferences without
-/// additional ependencies.
+/// additional dependencies.
 library matan.collection;
 
 import 'dart:collection';
