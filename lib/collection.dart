@@ -7,9 +7,13 @@
 library matan.collection;
 
 import 'dart:collection';
+
+import 'package:meta/dart2js.dart' as dart2js;
 import 'package:meta/meta.dart';
 
-part '/src/collection/immutable/list.dart';
+part 'src/collection/immutable/collection.dart';
+part 'src/collection/immutable/list.dart';
+part 'src/collection/immutable/list_impl.dart';
 
 /// Utility extensions on [Iterable].
 extension IterableX<T> on Iterable<T> {
@@ -77,16 +81,5 @@ extension IterableX<T> on Iterable<T> {
       }
     }
     return true;
-  }
-
-  /// Returns an [ImmutableList] containing the elements of this [Iterable].
-  ///
-  /// The elements are in iteration order.
-  ImmutableList<T> toImmutableList() {
-    final self = this;
-    if (self is _ImmutableList<T>) {
-      return _ImmutableList(self._list);
-    }
-    return ImmutableList.from(this);
   }
 }

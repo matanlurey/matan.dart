@@ -7,4 +7,4 @@
 /// See also: https://fsharpforfunandprofit.com/posts/against-railway-oriented-programming/.
 library matan.railway;
 
-export '/src/railway/or.dart' show Or2, Or3;
+export '/src/railway/or.dart' show Or2, Or3, Or4;

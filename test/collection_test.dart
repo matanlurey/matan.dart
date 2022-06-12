@@ -54,6 +54,54 @@ void main() {
       });
     });
   });
+
+  group('ImmutableList', () {
+    test('should copy a list of elements', () {
+      final copy = [1, 2, 3];
+      final list = ImmutableList(copy);
+      expect(list, containsAllInOrder([1, 2, 3]));
+
+      copy.clear();
+      expect(list, containsAllInOrder([1, 2, 3]));
+    });
+
+    group('should create a new list with', () {
+      for (var i = 0; i < 10; i++) {
+        test('$i parameters', () {
+          // This is not a good way to use .of, but it is easier to test.
+          final input = List.generate(i, (i) => i);
+          final list = Function.apply(ImmutableList.of, input) as ImmutableList;
+          if (i == 0) {
+            expect(list, isEmpty);
+          } else {
+            expect(list, containsAllInOrder(input));
+          }
+        });
+      }
+    });
+
+    test('should provide [] access', () {
+      expect(ImmutableList.of(1)[0], 1);
+    });
+
+    test('should provide compatibility with List', () {
+      final list = ImmutableList.of(1, 2, 3).asList();
+      expect(list, containsAllInOrder([1, 2, 3]));
+      expect(() => list.add(4), throwsUnsupportedError);
+    });
+
+    test('should provide shallow equality semantics', () {
+      final a = ImmutableList.of(1, 2, 3);
+      final b = ImmutableList.of(1, 2, 3);
+      expect(a, equals(b));
+      expect(a.hashCode, b.hashCode);
+    });
+
+    test('should provide mutation through builders', () {
+      final list = ImmutableListBuilder<int>().add(1).addAll([2, 3]).build();
+      expect(list, containsAllInOrder([1, 2, 3]));
+    });
+  });
 }
 
 extension _ListX<T> on List<T> {
