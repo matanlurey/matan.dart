@@ -34,5 +34,5 @@ jobs:
       - name: Upload Coverage
         uses: codecov/codecov-action@v2
         with:
-          files: coverage/coverage.lcov
+          files: coverage/lcov.info
           verbose: true
